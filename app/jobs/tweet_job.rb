@@ -3,7 +3,6 @@ class TweetJob < ApplicationJob
 
   def perform(tweet)
     binding.irb
-    byebug
     return if tweet.published?
 
     # Rescheduled a tweet to the future
